@@ -1,46 +1,58 @@
-# **Will This Customer Purchase Your Product?**
-## **Project Overview**
-This project, based on a DataCamp exercise with further explorations, focuses on analysing online shopping behaviours of new and returning customers. The primary aim is to understand the differences in browsing habits and shopping patterns between these two customer groups. The insights generated from this analysis are intended to help the marketing team optimise strategies for customer engagement and predict future purchasing behaviour.
+# Customer Behaviour Analysis and Marketing Campaign Impact Assessment
 
-## **Data Description**
-The analysis uses a dataset containing information about online shopping sessions over the past year. Each session corresponds to a unique user and includes various details such as the number of pages visited, time spent on different page types, and whether a purchase was made.
+## Business Problem
 
-## Columns
-#### <p>**SessionID** : Unique session ID.<p>
-#### <p> **Administrative** : Number of pages visited related to the customer account.<p>
-#### <p>**Administrative_Duration** : Total amount of time spent (in seconds) on administrative pages.<p>
-#### <p>**Informational** : Number of pages visited related to the website and the company.<p>
-#### <p>**Informational_Duration**: Total amount of time spent (in seconds) on informational pages.<p>
-#### <p>**ProductRelated**: Number of pages visited related to available products.<p>
-#### <p>**ProductRelated_Duration**: Total amount of time spent (in seconds) on product-related pages.<p>
-#### <p>**BounceRates**: Average bounce rate of pages visited by the customer.<p>
-#### <p>**ExitRates**: Average exit rate of pages visited by the customer.<p>
-#### <p>**PageValues**: Average page value of pages visited by the customer.<p>
-#### <p>**SpecialDay**: Closeness of the site visiting time to a specific special day.<p>
-#### <p>**Weekend**: Indicator of whether the session is on a weekend.<p>
-#### <p>**Month**: Month of the session date.<p>
-#### <p>**CustomerType**: Type of customer (New_Customer or Returning_Customer).<p>
-#### <p>**Purchase**: Whether the customer made a purchase (1 for yes, 0 for no).<p>
+The marketing team at our startup faces a challenge in optimising customer engagement and increasing sales on our newly launched online shopping platform. With November and December being the busiest months, there is an urgent need to understand customer browsing behaviour to inform future marketing strategies. Specifically, the team requires insights into two key customer segments:
 
-## Data Source Reference
-The dataset was adapted from the Online Shoppers Purchasing Intention Dataset donated to the UC Irvine Machine Learning Repository on 8/30/2018 (DOI: 10.24432/C5F88Q). Some modifications include renaming and removing specific columns for clarity and relevance.
+- **Low Purchase Rate Customers:** Customers who engage with the site but rarely make purchases.
+- **Returning Customers:** Customers who have previously purchased and returned to the site.
 
-## Analysis and Insights
-### **Purchase Rates**
-The project starts by calculating the online purchase rates during November and December, the busiest months for shopping. It was observed that:
-**Returning Customers**: Had a lower purchase rate compared to new customers.
-**New Customers**: Showed a higher likelihood of making a purchase during these months.
-### **Correlation Analysis**
-The strongest correlations in total time spent between different types of pages visited were identified:
-**Administrative and Product-Related Pages**: Showed the highest correlation, suggesting that time spent on administrative tasks might be linked to product interest.
-### **Predicting Future Sales**
-The likelihood of achieving a specific sales target was estimated using binomial probability:
-**Sales Probability**: With an increased purchase rate, the probability of achieving at least 100 sales out of 500 sessions for returning customers was calculated.
-### **Further Explorations**
-The analysis extended beyond the original project scope by integrating additional statistical tests and visualisations to provide deeper insights into customer behaviour.
+The objective is to analyse these segments, understand their behaviours during the peak shopping months, and estimate the effectiveness of a proposed marketing campaign aimed at increasing their purchase rates.
 
-## **Conclusion**
-This project provides actionable insights into customer behaviour patterns, enabling the marketing team to better understand and target different customer segments. The analysis highlights the importance of personalised strategies for new and returning customers to maximise conversions.
+## Analysis Overview
 
-**Acknowledgements**
-This project was initially based on a DataCamp exercise, with further analyses and insights added to extend its scope and depth.
+This project is conducted as part of a DataCamp exercise, focusing on applying data science techniques to solve real-world business problems. The analysis includes the following key components:
+
+### 1. **Customer Segmentation and Behaviour Analysis**
+
+- **Objective:** Identify and analyse the behaviour of low purchase rate customers and returning customers during November and December.
+- **Key Metrics Analysed:**
+  - **Purchase Rate:** The proportion of sessions that result in a purchase.
+  - **Session Duration:** The amount of time customers spend on the site.
+  - **Page Interaction:** The types of pages customers interact with (e.g., Administrative, Product-related).
+- **Findings:** Returning customers have a lower purchase rate (19.6%) compared to new customers (27.3%), highlighting a need for targeted re-engagement strategies.
+
+### 2. **Correlation Analysis**
+
+- **Objective:** Understand the relationship between different types of page interactions (e.g., Administrative vs. Product-related) and how they relate to purchase behaviour.
+- **Methodology:** Calculate correlation coefficients between time spent on different page types.
+- **Key Findings:** A moderate correlation (0.39) exists between time spent on Administrative and Product-related pages, suggesting that customers who engage with account management are also more likely to browse products.
+
+### 3. **Campaign Impact Estimation**
+
+- **Objective:** Estimate the likelihood of achieving specific sales targets under a new marketing campaign aimed at returning customers.
+- **Methodology:** 
+  - **Baseline Analysis:** Use the current purchase rate of returning customers as a baseline.
+  - **Scenario Simulation:** Apply a binomial distribution model to estimate the probability of reaching at least 100 sales out of 500 sessions with a projected 15% increase in purchase rate.
+- **Results:**
+  - **Increased Purchase Rate:** If the campaign increases the purchase rate to 22.5%, there is a 90.1% probability of achieving at least 100 sales out of 500 sessions.
+  - **Business Insight:** The high probability suggests that the campaign has strong potential for success, providing a solid foundation for marketing strategy.
+
+## Recommendations
+
+1. **Targeted Campaign for Returning Customers:**
+   - Implement loyalty programmes, personalised offers, and cart reminders to re-engage returning customers and boost conversion rates.
+
+2. **Monitor and Adjust Campaign Strategy:**
+   - Proceed with the campaign but set realistic goals and closely monitor performance to make necessary adjustments.
+
+3. **Enhance Customer Experience:**
+   - Improve the user experience on administrative pages by adding features like product recommendations based on past purchases to encourage further browsing and purchasing.
+
+## Conclusion
+
+This analysis addresses the key business problem by providing insights into customer behaviour and offering data-driven recommendations for a targeted marketing campaign. By focusing on re-engaging returning customers and optimising their interaction with the platform, we can drive significant sales growth and improve customer loyalty during peak shopping periods.
+
+---
+
+*This project is part of a DataCamp exercise designed to apply data science techniques to solve real-world business problems. For further details, data, and code, please refer to the project files in this repository. If you have any questions or need additional insights, feel free to reach out.*
